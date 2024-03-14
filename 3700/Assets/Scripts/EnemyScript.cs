@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,5 +27,11 @@ public class EnemyScript : MonoBehaviour
             this.transform.position = new Vector3(pos.x - Time.deltaTime * speed, pos.y, pos.z);
 
         }
+    }
+
+    //Increases the speed of this enemy
+    public void increaseSpeed(int amount)
+    {
+        this.speed += amount;
     }
 }

@@ -30,6 +30,10 @@ public class CandyScript : MonoBehaviour
         }
     }
 
-    //Destroys the object
+    //Increases the speed of this candy
+    public void increaseSpeed(int amount) 
+    {
+        this.speed += amount;
+    }
 
 }
