@@ -12,7 +12,6 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -42,6 +41,11 @@ public class Projectile : MonoBehaviour
         {
 
             Object.Destroy(e.gameObject);
+        }
+        else if (collision.gameObject.TryGetComponent(out Costume cost))
+        {
+
+            Object.Destroy(cost.gameObject);
         }
         Object.Destroy(this.gameObject);
     }

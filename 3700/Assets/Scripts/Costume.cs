@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CandyScript : MonoBehaviour
+public class Costume : MonoBehaviour
 {
+    [SerializeField]
+    Class costume;
     [SerializeField]
     bool isVertical;
     [SerializeField]
@@ -13,7 +15,7 @@ public class CandyScript : MonoBehaviour
     {
         
     }
-
+  
     // Update is called once per frame
     void Update()
     {
@@ -29,10 +31,11 @@ public class CandyScript : MonoBehaviour
         }
     }
 
-    //Increases the speed of this candy
-    public void increaseSpeed(int amount) 
+    //Increases the speed of this enemy
+    public void increaseSpeed(int amount)
     {
         this.speed += amount;
     }
 
+    public Class getCostume() { return costume; }
 }
